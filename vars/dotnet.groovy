@@ -16,7 +16,8 @@ def call(String dotnetcmd, Map dotnetcmdParams)
 		   If you're using Windows - use the bat command
 		   Leave only the relevant command according to your OS
 		*/
-		
+		echo path
+        
 		// Linux:
 		sh "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
 
