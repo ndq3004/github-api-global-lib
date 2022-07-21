@@ -18,10 +18,10 @@ def call(String dotnetcmd, Map dotnetcmdParams)
 		*/
 		
 		// Linux:
-		sh "dotnet ${dotnetcmd} ${WORKSPACE}${path} ${params}"
+		sh "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
 
 		// Windows:
-		bat "dotnet ${dotnetcmd} ${WORKSPACE}${path} ${params}"
+		bat "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
 
 		}
 
