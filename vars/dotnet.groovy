@@ -17,7 +17,11 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
 		   Leave only the relevant command according to your OS
 		*/
 		File file = new File("/home/ec2-user/netcore/PipelineNetcore1/${path}")
-        echo file.exists()
+        if(file.exists()){
+            echo "file exists!"
+        }else{
+            echo "file not exists!"
+        }
         
 		// Linux:
 		sh "dotnet ${dotnetcmd} /home/ec2-user/netcore/PipelineNetcore1/${path} ${params}"
