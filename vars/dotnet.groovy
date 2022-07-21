@@ -26,10 +26,10 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
         }
         
 		// Linux:
-		sh "dotnet ${dotnetcmd} /home/ec2-user/netcore/PipelineNetcore1/${path} ${params}"
+		sh "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
 
 		// Windows:
-		bat "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
+		//bat "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
 
 		}
 
