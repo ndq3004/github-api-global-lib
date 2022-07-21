@@ -5,7 +5,7 @@
 
 
 // The call function in a shared library file is used as a constructor
-def call(String dotnetcmd, Map dotnetcmdParams, String sudo)
+def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
 {
 	// Iterate over all the dictionary element contains the dotnet file path and dotnet command options
 	dotnetcmdParams.each{ path, params ->
