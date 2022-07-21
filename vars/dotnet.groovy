@@ -19,7 +19,7 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
 		echo path
         
 		// Linux:
-		sh "${sudo} dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
+		sh "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
 
 		// Windows:
 		bat "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
