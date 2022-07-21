@@ -17,6 +17,8 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
 		   Leave only the relevant command according to your OS
 		*/
 		File file = new File("/home/ec2-user/netcore/PipelineNetcore1/${path}")
+        String currentDir = new File(".").getAbsolutePath()
+        echo currentDir
         if(file.exists()){
             echo "file exists!"
         }else{
