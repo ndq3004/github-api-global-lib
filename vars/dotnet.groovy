@@ -16,7 +16,8 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
 		   If you're using Windows - use the bat command
 		   Leave only the relevant command according to your OS
 		*/
-		echo path
+		File file = new File("/home/ec2-user/netcore/PipelineNetcore1/${path}")
+        println file.exists()
         
 		// Linux:
 		sh "dotnet ${dotnetcmd} /home/ec2-user/netcore/PipelineNetcore1/${path} ${params}"
