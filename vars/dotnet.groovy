@@ -2,7 +2,7 @@
 	DESCRIPTION:
 	Building a dotnet command
 */
-
+import java.io.File
 
 // The call function in a shared library file is used as a constructor
 def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
