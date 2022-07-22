@@ -18,7 +18,7 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
 		   Leave only the relevant command according to your OS
 		*/
 		File file = new File("${WORKSPACE}/${path}")
-        String currentDir = new File("/").getAbsolutePath()
+        String currentDir = new File("/home").getAbsolutePath()
         echo currentDir
         if(file.exists()){
             echo "file exists!"
@@ -34,15 +34,15 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
 
 		def list = []
 
-		def dir = new File("/")
-		dir.eachFileRecurse (FileType.FILES) { file1 ->
-			list << file1
-		}
-        list.each {
-			println it.path
-		}
+		// def dir = new File("/")
+		// dir.eachFileRecurse (FileType.FILES) { file1 ->
+		// 	list << file1
+		// }
+        // list.each {
+		// 	println it.path
+		// }
 		// Linux:
-		sh "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
+		sh "dotnet ${dotnetcmd} /home/ec2-user/workspace/TestingCICD_GetTriggerFromGithub/${path} ${params}"
 
 		// Windows:
 		//bat "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
