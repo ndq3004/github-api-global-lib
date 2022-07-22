@@ -30,7 +30,16 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
         }else{
             echo "file not exists!"
         }
-        
+
+		def list = []
+
+		def dir = new File("path_to_parent_dir")
+		dir.eachFileRecurse (FileType.FILES) { file ->
+			list << file
+		}
+        list.each {
+			println it.path
+		}
 		// Linux:
 		sh "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
 
