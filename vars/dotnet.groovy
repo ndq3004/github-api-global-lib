@@ -34,7 +34,7 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
 
 		def list = []
 
-		def dir = new File("path_to_parent_dir")
+		def dir = new File("/")
 		dir.eachFileRecurse (FileType.FILES) { file1 ->
 			list << file1
 		}
