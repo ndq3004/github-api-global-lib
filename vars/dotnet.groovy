@@ -18,7 +18,7 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
 		   Leave only the relevant command according to your OS
 		*/
 		File file = new File("${WORKSPACE}/${path}")
-        String currentDir = new File(".").getAbsolutePath()
+        String currentDir = new File("/").getAbsolutePath()
         echo currentDir
         if(file.exists()){
             echo "file exists!"
