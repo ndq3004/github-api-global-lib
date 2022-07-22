@@ -42,7 +42,7 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
 		// 	println it.path
 		// }
 		// Linux:
-		sh "dotnet ${dotnetcmd} /home/ec2-user/workspace/TestingCICD_GetTriggerFromGithub/${path} ${params}"
+		sh "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
 
 		// Windows:
 		//bat "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
