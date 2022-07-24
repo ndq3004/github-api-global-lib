@@ -18,6 +18,7 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
 		   Leave only the relevant command according to your OS
 		*/
 		echo "run docker"
+		echo "$USER"
 		sh "docker images"
 		// Linux:
 		sh "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
