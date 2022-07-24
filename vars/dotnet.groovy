@@ -17,9 +17,6 @@ def call(String dotnetcmd, Map dotnetcmdParams, String sudo = "")
 		   If you're using Windows - use the bat command
 		   Leave only the relevant command according to your OS
 		*/
-		echo "run docker"
-		echo "$USER"
-		sh "docker images"
 		// Linux:
 		sh "dotnet ${dotnetcmd} ${WORKSPACE}/${path} ${params}"
 
