@@ -18,6 +18,8 @@ def call(String dockerCmd, Map dockerCmdParams, String sudo = "")
 		
 		// Linux:
 		// sh "docker ${dockerCmd} ${params}"
+		echo "get here"
+		sh "docker images"
 		sh "docker build -t aspnetapp /home/ec2-user/workspace/PipelineNetcore1/DemoCICDSolution"
 
 		// Windows:
